@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    My Contacts
+{%  endblock title %}
+{% block content %}
+
+    <div class="container">
+      <h3 class="heading font-weight-light dreamer">Here are your contacts</h3>
+      <hr />
+    </div>
+    <div class="container main-part">
+      <!-- Card for details -->
+
+        {% if contacts %}
+            {% for contact in contacts %}
+                {% include 'partials/_card.html' %}
+            {% endfor %}
+        {% else %}
+            <p class="dreamer m2 ">you haven't create any contacts...!</p>
+        {% endif %}
+
+
+    </div>
+{% endblock content %}

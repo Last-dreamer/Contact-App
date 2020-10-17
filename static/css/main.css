@@ -1,0 +1,326 @@
+:root {
+  --back: #29a7a6;
+  /* --logo: #ff70a6; */
+  --girl: #e64298;
+  --boy: #2874dd;
+}
+body {
+  font-family: Lato, sans-serif;
+}
+
+/* Navbar Styles */
+
+nav {
+  font-weight: lighter;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--back);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 30px;
+  letter-spacing: 1px;
+  /* background: var(--logo); */
+  color: antiquewhite;
+  padding: 2px 12px;
+  border-radius: 8px;
+  font-family: cursive;
+}
+.logo:hover {
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+
+form {
+  position: relative;
+}
+
+button {
+  position: absolute;
+  right: 1px;
+  outline: none;
+  cursor: pointer;
+}
+
+button i {
+  color: var(--back);
+}
+
+input {
+  border-radius: 0px !important;
+  width: 250px;
+  border: none !important;
+  background-color: #f2f3f5 !important;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav form {
+  transform: translateX(300px);
+  padding: 0;
+}
+
+.mine {
+  color: #fff;
+  /*margin:0 -250px  0 0 !important;*/
+  padding-top: 15px;
+  transform: translateX(480px);
+}
+
+.mine:hover {
+  font-size: 25px;
+  color:azure;
+}
+
+
+/* Navbar Styles end */
+
+/* Card Styles */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+img {
+  height: 130px !important;
+}
+.card-header {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.header-link:hover {
+  text-decoration: none;
+}
+.boy-card .card-header {
+  background-color: var(--boy);
+}
+.boy-card .card-body,
+.boy-card .card-body p a {
+  color: var(--boy);
+}
+.girl-card .card-header {
+  background-color: var(--girl);
+}
+
+.girl-card .card-body,
+.girl-card .card-body p a {
+  color: var(--girl);
+}
+.card-body p {
+  cursor: pointer;
+}
+/* Card Styles end */
+
+/* Main Section */
+.main-part {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* Main Section ends */
+
+/* footer style */
+footer {
+  background-color: var(--back);
+  color: white;
+  bottom:0;
+  left:0;
+  width:100%;
+  position: relative;
+  font-size: 14px;
+  border-bottom: 2px solid var(--back);
+}
+
+
+
+.dreamer {
+   font-family: cursive;
+  color:#000000;
+  font-size:30px;
+}
+
+
+
+h3 {
+ font-family: cursive;
+  color:#000000;
+  font-size:30px;
+  text-align: center;
+}
+
+/* footer style ends*/
+
+
+
+/*mine */
+
+.pressDownButton {
+    background-color: hsl(222, 100%, 95%) !important;
+    padding: 12px 24px;
+    color: hsl(243, 80%, 62%) !important;
+    border-radius: 6px;
+    border-bottom: 4px solid hsl(221, 89%, 85%) !important;
+    transition: all 0.1s ease-in-out;
+}
+
+.pressDownButton:hover {
+    border-bottom-width: 0 !important;
+    margin-top: 3px !important;
+}
+
+
+.my-form {
+  margin-bottom: 20px;
+}
+
+.borderLeftRight {
+    display: inline-block;
+    position: relative;
+    color: hsl(222, 25%, 14%);
+  }
+
+  .borderLeftRight::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: hsl(243, 80%, 62%);
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  .borderLeftRight:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+
+/*  */
+
+
+.anime {
+  position: relative;
+  font-family: cursive;
+  font-size: 1em !important;
+  letter-spacing: 2px;
+  overflow: hidden;
+  background: linear-gradient(45deg, orangered, #fff, orangered);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  animation: animate 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+
+
+/*  */
+
+
+
+.dreamerbtnX {
+	font-family: cursive;
+	font-size: 15px;
+	font-weight: bolder;
+	color:#000;
+	transform: translateX(160px);
+}
+.dreamerbtnX:hover {
+	text-decoration: none;
+	color:#000;
+
+}
+
+.dreamerbtnX2 {
+  transform: translateX(110px);
+
+}
+
+
+.dreamerbtn {
+	font-family: cursive;
+	font-size: 15px;
+	font-weight: bolder;
+	color:#000;
+	transform: translateX(10px);
+}
+.dreamerbtn:hover {
+	text-decoration: none;
+	color:#000;
+
+}
+
+
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  /* navbar style */
+  nav {
+    flex-direction: column;
+  }
+
+  nav form {
+    transform: translateX(0px);
+  }
+
+  .mine {
+    transform: translateX(140px);
+  }
+  .logo {
+    font-size: 22px !important;
+  }
+  .dreamerbtnX {
+   width: 20%;
+    transform: translateX(110px);
+  }
+
+  /* navbar style ends */
+
+  /* card styles */
+  .card-header {
+    font-size: 90% !important;
+  }
+  .card-body p {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  .card-body {
+    padding: 8px 8px 0 8px;
+  }
+
+  /* card styles end */
+
+  /* footer style */
+  footer {
+    font-size: 78% !important;
+    font-weight: lighter;
+    letter-spacing: 2px;
+  }
+  /* footer style ends */
+}
+/* Media Queries Ends*/

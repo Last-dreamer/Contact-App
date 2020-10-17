@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    {# animate css  #}
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+
+{# js #}
+  <script type="javascript" src="{% static './js/main.js' %}"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static "./css/main.css" %}" />
+    <link rel="stylesheet" href="{% static "./css/mine.css" %}" />
+
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    />
+  <link  rel="title icon" href="{% static 'images/boy.png' %}"/>
+
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav>
+      <a class="logo" href="/">
+        <i class="fas fa-user-circle"></i>&nbsp;Contacts
+      </a>
+
+        {% if request.user.is_authenticated %}
+        <a class="mine"  href="{% url 'create' %}">
+          <i class="fas fa-plus">
+          </i>
+        </a>
+         {% endif %}
+
+
+      <form class="form-inline" action="{% url 'search' %}" method="GET">
+        <input
+          class="form-control search-box"
+          type="text"
+          placeholder="Find contacts..."
+          name="search"
+          value="{{ search_term }}"
+        />
+        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+
+
+
+        {% if request.user.is_authenticated %}
+
+        <a class="btn3d btn-info p-2  dreamerbtnX dreamerbtnX2"  href="{% url 'logout' %}">
+            LogOut
+        </a>
+
+        {% else %}
+
+        <a class="btn3d btn-info p-2 mx-3 dreamerbtnX"  href="{% url 'login'  %}">
+            LogIn
+        </a>
+
+        <a class="btn3d btn-info p-2 mx-3 dreamerbtn"  href="{% url 'signup'  %}">
+            SignUp
+        </a>
+        {% endif %}
+
+
+
+
+    </nav>
+    <!-- Navbar ends -->
+    <br />
+
+    {% include 'partials/_message.html' %}
+
+    <!-- Main Section -->
+    {% block content %}
+
+    {%  endblock content %}
+    <!-- Main Section ends-->
+
+    <!-- footer -->
+    <footer class="mt-3">
+      <p class="text-center m-0">&copy; My Contacts By
+          <span class="anime">Dreamer</span></p>
+    </footer>
+    <!-- footer ends -->
+  </body>
+</html>

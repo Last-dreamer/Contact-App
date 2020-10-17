@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}
+    {% if contact.manger == request.user %}
+     Delete {{ contact.name }}
+    {% else %}
+        You don't have access to this Page...
+    {% endif  %}
+{% endblock title %}
+{% block content %}
+
+    {% if contact.manager == request.user %}
+
+    <div class="container">
+      <h2 class="heading font-weight-lighter text-center dreamer">Delete {{ contact.name }}</h2>
+      <hr/>
+    </div>
+    <div class="container w-25 card p-6 mt-3">
+      <form action="" method="POST" enctype="multipart/form-data" class="my-form">
+        {% csrf_token %}
+          {{ form|crispy }}
+          <input type="submit" value="Delete" class="w-100 text-black pressDownButton btn mb-5">
+      </form>
+    </div>
+
+    {% else %}
+
+         <div class="container">
+          <h2> You don't have access to this account....!!</h2>
+      <hr/>
+    </div>
+
+    {% endif %}
+
+
+{% endblock content %}
