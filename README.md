@@ -9,4 +9,4 @@
 
 
 ## actual demo
-lost2dreamer.pythonanywhere.com
+https://lost2dreamer.pythonanywhere.com/
